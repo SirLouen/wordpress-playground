@@ -124,7 +124,7 @@ describe.each(blueprintVersions)(
 				const response = await fetch(siteUrlTestUrl);
 				expect(response.status).toBe(200);
 				const text = await response.text();
-				expect(text).toContain('http://127.0.0.1:9500');
+				expect(text).toContain('http://localhost:9500');
 			}
 		);
 
@@ -633,7 +633,7 @@ describe.each(blueprintVersions)(
 								'Finished running the blueprint',
 								'Preparing workers...',
 								expect.stringMatching(
-									/^WordPress is running on http:\/\/127\.0\.0\.1:\d+ with \d+ worker\(s\)$/
+									/^WordPress is running on http:\/\/localhost:\d+ with \d+ worker\(s\)$/
 								),
 							])
 						);
@@ -646,7 +646,7 @@ describe.each(blueprintVersions)(
 								'Setting up WordPress undefined',
 								'Booted!',
 								expect.stringMatching(
-									/^WordPress is running on http:\/\/127\.0\.0\.1:\d+$/
+									/^WordPress is running on http:\/\/localhost:\d+$/
 								),
 							])
 						);
