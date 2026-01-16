@@ -856,7 +856,7 @@ export async function runCLI(args: RunCLIArgs): Promise<RunCLIServer | void> {
 	const server = await startServer({
 		port: selectedPort,
 		onBind: async (server: Server, port: number) => {
-			const host = '127.0.0.1';
+			const host = 'localhost';
 			const serverUrl = `http://${host}:${port}`;
 			const siteUrl = args['site-url'] || serverUrl;
 
